@@ -11,10 +11,12 @@ Vue.use(VueCompositionApi);
 Vue.config.productionTip = false
 
 import Home from './components/Home.vue';
+import chatRoom from './components/chatRoom.vue';
 
 const router = new VueRouter({
   routes: [
-    { path: '/', component: Home}
+    { path: '/', component: Home},
+    { path: '/chats/:id', component: chatRoom, name: 'chat' }
   ]
 });
 
